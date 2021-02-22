@@ -1,0 +1,32 @@
+Algoritmo sin_titulo
+	definir sec, min, hora Como Entero;
+	definir sec2, min2, hora2 Como Caracter;
+	Limpiar Pantalla;
+	Mientras Verdadero
+	Para hora = 0 Hasta 23 con paso 1 Hacer
+		para min = 0 Hasta 59 con paso 1 Hacer
+			para sec = 0 Hasta 59 con paso 1 Hacer
+				si hora > 9 Entonces
+					hora2 = "";
+				SiNo
+					hora2 = "0";
+				FinSi
+				si min > 9 Entonces
+					min2 = ":";
+				SiNo
+					min2 = ":0";
+				FinSi
+				si sec > 9 Entonces
+					sec2 = ":";
+				SiNo
+					sec2 = ":0";
+				FinSi
+				Escribir hora2,hora,min2,min,sec2,sec;
+				esperar 100 Milisegundos;
+				Limpiar Pantalla;
+			FinPara
+		FinPara
+	FinPara
+FinMientras
+
+FinAlgoritmo
