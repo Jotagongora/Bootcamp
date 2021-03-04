@@ -1,0 +1,23 @@
+div.width-background {
+    height: 50vh;
+    background-image: url(../../HTML/imagenes/malagaport.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+    border: 15px ridge blue;
+    margin-top: 500px;
+    }
+
+    div.redarea {height: 100vh;
+    background: white;}
+
+    /* especifidad solo en selectores */
+
+    h1 {margin: 15px;
+        padding: 15px;
+        padding-left: 300px;
+        color: white;
+        
+    }
+
+    
+ 
