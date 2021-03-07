@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(105, 236, 105);
+    border: 1px solid green;
+}
+
+form.search label {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(6, 70, 6);
+}
+
+nav.logo {
+    display: inline;
+}
+
+header nav img {
+    width: 160px;
+}
+
+form.search input {
+    width: 70%;
+}
+
+form.search {
+    margin-top: 30px;
+    display: inline;
+    float: right;
+}
+
+nav.enlaces {
+    background-color: blue;
+}

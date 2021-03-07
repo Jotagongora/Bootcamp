@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+}
+
+nav ul {
+
+    background-color: rgb(231, 219, 219);
+    padding-left: 25px;
+    list-style-image: url("../../../HTML/imagenes/boton-de-play.png");
+}
+
+nav ul li {
+    border: 1px solid black;
+    margin-right: 50%;
+}
+
+
+
