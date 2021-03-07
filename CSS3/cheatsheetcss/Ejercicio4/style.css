@@ -3,12 +3,12 @@
 }
 
 header {
-    background-color: rgb(105, 236, 105);
+    background-color: white;
     border: 1px solid green;
 }
 
 form.search label {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(6, 70, 6);
 }
 
@@ -30,6 +30,131 @@ form.search {
     float: right;
 }
 
-nav.enlaces {
-    background-color: blue;
+nav.links {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid green;
+    border-top: none;
+    clear: both;
+}
+
+nav.links a {
+    text-decoration: none;
+    margin: 1%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav.newsblock {
+    background-color: #ffffff;
+    float: left;
+    width: 22%;
+    overflow: hidden;
+    display: block;
+}
+
+nav.newsfront {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 200%;
+    padding: 5%;
+}
+
+nav.newsfront a {
+    text-decoration: none;
+    color: rgb(6, 70, 6);
+    font-size: 80%;
+}
+nav.news a{
+    text-decoration: none;
+}
+
+nav.news {
+    padding-top: 15px;
+}
+
+nav.newsblock p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(6, 70, 6);
+}
+
+div.movies {
+   background-color: white;
+   width: 75%;
+   float: left;
+   margin-left: 10px;
+   display: block;
+}
+
+iframe {
+    width: 75%;
+    height: 75%;
+    display: inline;
+    margin: 10px;
+    float: left;
+  
+}
+
+div.trailers p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+    color: rgb(6, 70, 6);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+div.trailers h3 {
+    color: rgb(6, 70, 6);
+    margin-top: 10px;
+}
+
+div.trailers a {
+    text-decoration: none;
+}
+
+div.trailers {
+    width: 65%;
+    float: left;
+    display: inline;
+    margin-right: 10px;
+}
+
+div.moviesnews {
+    width: 30%;
+    display: inline;
+    overflow: hidden;
+    clear: both;
+    
+}
+
+div.moviesnews h3 {
+    color: rgb(6,70,6);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+div.moviesnews p {
+    color: rgb(6, 70, 6);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+footer nav a {
+    clear: both;
+    text-decoration: none;
+    margin: 1%;
+}
+
+footer {
+    display: inline;
+}
+
+footer div {
+    display: inline;
+    float: right;
+}
+
+footer div h3 {
+    
 }
