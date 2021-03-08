@@ -146,15 +146,31 @@ footer nav a {
     margin: 1%;
 }
 
+div.footer {
+    clear: both;
+}
+
 footer {
-    display: inline;
+    border: 1px solid green;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer nav {
+display: inline;
+}
+
+footer nav a {
+    font-size: 90%;
 }
 
 footer div {
-    display: inline;
     float: right;
+    padding-right: 10px;
 }
 
 footer div h3 {
-    
+    color: rgb(6, 70, 6);
+    font-size: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
