@@ -1,0 +1,41 @@
+/* Flexbox */
+
+.flex-parent {
+    display: flex;
+    flex-direction: row;  /* Row / Column (row por defecto)*/
+    /* flex-wrap: wrap; */
+    /* flex-flow   Combina direction y wrap en una sola */
+    height: 250px;
+    border: 1px solid black;
+
+    justify-content:space-around;
+}
+    
+
+[class^="flex-child"] {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-parent > div:nth-child(odd) {  /* Impares */
+    background-color: aquamarine;
+}
+
+.flex-parent > div:nth-child(even) {  /* Pares */
+    background-color: rgb(24, 243, 170);
+}
+
+.flex-child-2 {
+    flex-shrink: 3;
+    flex-grow: 2;
+}
+
+.flex-child-1 {
+    flex-shrink: 2;
+}
+.flex-child-3 {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
