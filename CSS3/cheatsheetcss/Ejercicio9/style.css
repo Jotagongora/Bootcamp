@@ -1,0 +1,135 @@
+.grid-parent {
+    width: 70%;
+    height: 650px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+[class^="grid-child"] {
+    background-color: rgb(17, 116, 209);
+}
+
+.transiciones:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+
+.appear-animation-1 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+}
+
+.appear-animation-2 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+}
+
+.appear-animation-3 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+}
+
+.appear-animation-4 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: ;
+}
+
+.appear-animation-5 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-6 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-7 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-8 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-9 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-10 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-11 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-12 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-13 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-14 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-15 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation-16 {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.appear-animation {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes appear {
+    from {
+       opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+ 
+    }
+}

@@ -1,0 +1,92 @@
+.menu-icon {
+    color: blue;
+}
+
+.menu-icon-2 {
+    color: green;
+}
+
+/* Degradados o gradientes de color*/
+
+[class^="gradient"] {
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+.gradient-1 {
+    background: linear-gradient(to right, darkblue, white);
+}
+
+.gradient-2 {
+    background: linear-gradient(to bottom, white, darkblue 60%, white);
+}
+
+.gradient-3 {
+    background: radial-gradient( white 1%, darkblue, black);
+    width: 50%;
+    box-shadow: 15px 10px 30px black ;
+}
+
+.gradient-4 {
+    background: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(255, 255, 255, 1)), url(../../../HTML/imagenes/malagaport.jpg);
+}
+
+/* Transformaciones */
+
+.transform {
+    height: 100px;
+    width: 100px;
+    background-color: #333;
+     transform: translate(300px, -20px) scale(0.8) skewX(25deg);
+}
+
+/* Transiciones */
+
+.transiciones {
+    height: 100px;
+    width: 100px;
+    margin-left: 200px;
+    background-color: darkcyan;
+    color: white;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition-property: transform;
+    transition-duration: 0.8s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out; */
+    transition: all transform 0.5s ease-in-out;
+
+}
+
+.transiciones:hover {
+    transform: scale(1.3) rotate(3deg);
+}
+
+/* Animaciones */
+
+.text-animation {
+    animation-name: slidein;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(2)
+    }
+
+
+    to {
+        margin-left: 15%;
+        transform: scale(1)
+ 
+    }
+}
