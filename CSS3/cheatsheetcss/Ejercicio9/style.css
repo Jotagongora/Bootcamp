@@ -9,7 +9,7 @@
 
 [class^="grid-child"] {
     background-color: rgb(17, 116, 209);
-    opacity: 100%;
+    opacity: 0%;
 }
 
 .transiciones:hover {
@@ -20,114 +20,130 @@
 
 .appear-animation-1 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: s;
     animation-iteration-count: 1;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-2 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-3 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 3s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-4 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 4s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-5 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-6 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 6s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-7 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 7s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-8 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 8s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-9 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 9s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-10 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 10s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-11 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 11s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-12 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 12s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-13 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 13s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-14 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 14s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-15 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 15s;
+    animation-fill-mode: forwards;
 }
 
 .appear-animation-16 {
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: 16s;
+    animation-fill-mode: forwards;
 }
 
 
