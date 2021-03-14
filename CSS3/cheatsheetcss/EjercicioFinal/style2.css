@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.margin1 {
+    margin: 10px;
+}
+
+.search {
+    width: 33%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0px;
+}
+
+div li {
+    list-style: none;
+}
