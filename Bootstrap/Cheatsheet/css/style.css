@@ -1,3 +1,17 @@
-.sized {
-    height: 100px;
+div {
+  background-color: red;
 }
+div a {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+
+form {
+  background-color: aquamarine;
+}
+
+/*# sourceMappingURL=style.css.map */
