@@ -11,20 +11,22 @@
 
 .content {
     display: flex;
-    justify-content: flex-end;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 2px 2px 50px black;
-    margin-top: 100px;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
 }
 
 .fix {
     background-image: url(../imagenes/57662268-escritorio-de-oficina-con-el-ordenador-portátil-en-blanco-café-y-diversos-artículos-de-papelería-en-el-fondo.jpg);
     background-position: center;
     background-size: cover;
-    width: 100%;
+    width: 50%;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .backcolor {
@@ -43,6 +45,11 @@
     border-radius: 10px;
 }
 
+.inputsubmit > input:hover {
+    background-color: #621add;
+    cursor: pointer;
+}
+
 hr {
     margin: 20px;
 }
@@ -56,6 +63,8 @@ hr {
 
 form {
     box-sizing: border-box;
+    width: 50%;
+    border-radius: 10px;
 }
 
 form > div > input {
@@ -75,35 +84,50 @@ form {
     width: 50%;
 }
 
+nav a {
+    font-size: 80%;
+    text-align: center;
+}
+
+nav a i {
+    padding-right: 5px;
+}
+
+nav.links > a:hover {
+    background-color: rgb(247, 239, 239);
+}
+
 .links {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.links button {
-    margin-bottom: 20px;
-}
-
-.links button a {
-   text-decoration: none;
-}
-
 .link a {
+    text-align: start;
+    display: inline;
+}
+
+
+form a {
     display: block;
     margin-bottom: 20px;
     text-decoration: none;
 }
 
-
+@media only screen and (max-width: 1200px) {
+    .content {
+        width: 75%;
+        margin: auto;
+    }
 
  
 @media only screen and (max-width: 758px) {
     .content {
         flex-direction:column;
-        font-size: 70%;
-        margin-right: 5%;
-        margin-left: 5%;
+        font-size: 95%;
+        width: 95%;
+        margin: auto;
     }
 
     .fix {
