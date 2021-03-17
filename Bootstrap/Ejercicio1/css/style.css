@@ -1,0 +1,34 @@
+.bcimage {
+    background-image: url("../imagenes/coche1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+
+}
+
+.bcimage:nth-child(2) {
+    background-image: url("../imagenes/coche2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+.bcimage:last-child {
+    background-image: url("../imagenes/coche3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+
+.imgplaceholder {
+    background-image: url("../imagenes/placeholderimg.png");
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.h3margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -7,8 +7,17 @@
     margin: 10px;
 }
 
+.listdisplay {
+    display: none;
+}
+
+.listpadding {
+    padding-top: 5px;
+}
+
 .search {
-    width: 33%;
+    align-self: center;
+    width: 50%;
 }
 
 header {
