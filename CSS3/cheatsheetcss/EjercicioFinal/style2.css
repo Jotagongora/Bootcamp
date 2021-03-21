@@ -8,6 +8,11 @@
     margin: 10px;
 }
 
+.grid-parent {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .listdisplay {
     display: none;
 }

@@ -11,9 +11,8 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="margin1">
-            <i class="fas fa-bars margin1"></i>
+    <div class="grid-parent">
+        <div class="margin1 grid-child-1">
             <ul class="listdisplay">
                 <li><a href="">Codespace</a>
                     <ul>
@@ -27,112 +26,115 @@
                 </li>
             </ul>
         </div>
-        <div class="margin1 search">
-            <input type="search" placeholder="Search for anything">
-        </div>
-        <div class="icons margin1">
-            <i class="fas fa-bell margin1"></i>
-            <i class="fas fa-user margin1"></i>
-        </div>
-    </header>
-    <div class="mainBlock">
-        <div class="contentBlock">
-
-            <div class="square-parent">
-                <h2 class="square2">Dashboard</h2>
-                <nav class="moreContent">
-                    <p>See what you've missed!</p>
-                    <a href="#">View more</a>
-                </nav>
-                <div class="square">
-                    <div class="iconSquare"><i class="fas fa-users"></i></div>
-                    <div class="iconSquare">
-                        <p>Total Clients</p>
-                        <h3>6389</h3>
+        <div class="grid-child-2">
+            <header>
+                <i class="fas fa-bars margin1"></i>
+                <div class="margin1 search">
+                    <input type="search" placeholder="Search for anything">
+                </div>
+                <div class="icons">
+                    <i class="fas fa-bell margin1"></i>
+                    <i class="fas fa-user margin1"></i>
+                </div>
+            </header>
+            <div class="mainBlock">
+                <div class="contentBlock">
+                    <div class="square-parent">
+                        <h2 class="square2">Dashboard</h2>
+                        <nav class="moreContent">
+                            <p>See what you've missed!</p>
+                            <a href="#">View more</a>
+                        </nav>
+                        <div class="square">
+                            <div class="iconSquare"><i class="fas fa-users"></i></div>
+                            <div class="iconSquare">
+                                <p>Total Clients</p>
+                                <h3>6389</h3>
+                            </div>
+                        </div>
+                        <div class="square">
+                            <div class="iconSquare"><i class="fas fa-money-bill"></i></div>
+                            <div class="iconSquare">
+                                <p>Account balance</p>
+                                <h3>$ 46,760.89</h3>
+                            </div>
+                        </div>
+                        <div class="square">
+                            <div class="iconSquare"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="iconSquare">
+                                <p>New sales</p>
+                                <h3>376</h3>
+                            </div>
+                        </div>
+                        <div class="square">
+                            <div class="iconSquare"><i class="fas fa-comment-dots"></i></div>
+                            <div class="iconSquare">
+                                <p>Pending contacts</p>
+                                <h3>35</h3>
+                            </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hans Burguer</td>
+                                    <td>$ 863.45</td>
+                                    <td>Approved</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Curry</td>
+                                    <td>$ 86.00</td>
+                                    <td>Denied</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>Rulia Joberts</td>
+                                    <td>$ 1276.45</td>
+                                    <td>Approved</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>Wenzel Dashington</td>
+                                    <td>$ 863.45</td>
+                                    <td>Expired</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>Dave Li</td>
+                                    <td>$ 863.45</td>
+                                    <td>Approved</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>María Ramovic</td>
+                                    <td>$ 863.45</td>
+                                    <td>Approved</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>Hitney Wouston</td>
+                                    <td>$ 863.45</td>
+                                    <td>Approved</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                                <tr>
+                                    <td>Oliver Aton</td>
+                                    <td>$ 863.45</td>
+                                    <td>Approved</td>
+                                    <td>6/10/2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="square">
-                    <div class="iconSquare"><i class="fas fa-money-bill"></i></div>
-                    <div class="iconSquare">
-                        <p>Account balance</p>
-                        <h3>$ 46,760.89</h3>
-                    </div>
-                </div>
-                <div class="square">
-                    <div class="iconSquare"><i class="fas fa-shopping-cart"></i></div>
-                    <div class="iconSquare">
-                        <p>New sales</p>
-                        <h3>376</h3>
-                    </div>
-                </div>
-                <div class="square">
-                    <div class="iconSquare"><i class="fas fa-comment-dots"></i></div>
-                    <div class="iconSquare">
-                        <p>Pending contacts</p>
-                        <h3>35</h3>
-                    </div>
-                </div>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Client</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Hans Burguer</td>
-                            <td>$ 863.45</td>
-                            <td>Approved</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                        <tr>
-                            <td>Sarah Curry</td>
-                            <td>$ 86.00</td>
-                            <td>Denied</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                        <tr>
-                            <td>Rulia Joberts</td>
-                            <td>$ 1276.45</td>
-                            <td>Approved</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                        <tr>
-                            <td>Wenzel Dashington</td>
-                            <td>$ 863.45</td>
-                            <td>Expired</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                        <tr>
-                            <td>Dave Li</td>
-                            <td>$ 863.45</td>
-                            <td>Approved</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                        <tr>
-                            <td>María Ramovic</td>
-                            <td>$ 863.45</td>
-                            <td>Approved</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                        <tr>
-                            <td>Hitney Wouston</td>
-                            <td>$ 863.45</td>
-                            <td>Approved</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                        <tr>
-                            <td>Oliver Aton</td>
-                            <td>$ 863.45</td>
-                            <td>Approved</td>
-                            <td>6/10/2021</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
