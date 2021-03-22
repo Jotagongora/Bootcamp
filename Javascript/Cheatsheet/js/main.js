@@ -2,7 +2,7 @@ function saludo () {
     alert("Hola desde saludo externo");
     console.log("Has hecho click");
 }
-document.getElementsByTagName("a").item(2).addEventListener("click", saludo);
+// document.getElementsByTagName("a").item(2).addEventListener("click", saludo);
 
 
 
@@ -171,5 +171,98 @@ console.log(person);
 person.jump();
 person.walk();
 
+//This
+const person2 = {
+    name: "Jhon",
+    talk() {
+        console.log(this);
+        console.log(`Me llamo ${this.name}`);
+    }
+}
 
+const person3 = {
+    name: "Sarah",
+    talk() {
+        console.log(this);
+        console.log(`Me llamo ${this.name}`);
+    }
+}
 
+person2.talk()
+person3.talk()
+
+console.log(this);
+
+//-------------------- Arrays --------------------------
+
+console.clear();
+
+let selectedColors = ["red", "blue"]; // Array de strings
+console.log(selectedColors,selectedColors.length, typeof selectedColors);
+selectedColors[2] = "green";
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.push("violet", "brown"); // Añade elementos 
+console.log(selectedColors, selectedColors.length);
+
+let removedItem = selectedColors.pop(); // Quita el último elemento
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.unshift("white", "black");
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.shift();
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.sort();
+console.log(selectedColors, selectedColors.length);
+
+console.log(selectedColors.indexOf("red"));
+
+console.log(selectedColors.slice(1, 3));
+console.log(selectedColors);
+
+console.log(selectedColors.splice(1, 3));
+console.log(selectedColors);
+
+console.clear();
+/*Crear un objeto niño, que tenga las propiedades nombre, altura, genero*/
+// y amigos,. Amigos estará inicialmente vaciío y los añadiremos
+// posteriormente 3 elementos con los nombres. Después, añadiremos
+// uno extra al incio.
+
+const boy = {
+    nombre: "Jhon",
+    altura: 1.35,
+    genero: "masculino",
+    amigos: [],
+    loseFriend() {
+        this.amigos.pop();
+    }
+}
+
+console.log(boy);
+
+boy.amigos.push("Pedro", "María", "Ana");
+
+console.log(boy);
+
+boy.amigos.unshift("Juan");
+
+console.log(boy);
+
+boy.loseFriend();
+
+console.log(boy);
+
+console.clear();
+//---------------- Condicionales -----------------------
+const randomNumber = 9;
+const guessNumber = "5"; 
+if (randomNumber === guessNumber)  {
+    console.log("Has acertado el número");
+} else if (randomNumber > guessNumber) {
+console.log("El número secreto es mayor");
+} else {
+    console.log("El número secreto es menor");
+} 
