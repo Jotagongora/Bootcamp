@@ -57,7 +57,6 @@ div li {
 }
 
 .mainBlock {
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -65,7 +64,6 @@ div li {
 }
 
 .contentBlock {
-    border: 1px solid black;
     width: 100%;
     font-size: 80%;
     display: flex;
@@ -131,6 +129,7 @@ div li {
 
 .square {
     display: flex;
+    align-items: center;
     border-radius: 10px;
     padding: 5px;
     width: 90%;
@@ -171,3 +170,38 @@ th {
     background-color: rgb(241, 234, 234);
 }
 
+@media only screen and (min-width: 600px) {
+    .grid-parent {
+        grid-template-columns: 200px 3fr;
+    }
+    .listdisplay {
+        display: block;
+    }
+
+    .contentBlock {
+        font-size: 90%;
+    }
+    
+    .fa-bars {
+        display: none;
+    }
+
+    .grid-parent-2 {
+        display: grid;
+        width: 95%;
+        margin-bottom: 15px;
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .grid-parent-2 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 92.2%;
+        margin-bottom: 15px;
+
+    }
+    .contentBlock {
+        font-size: 100%;
+    }
+}
