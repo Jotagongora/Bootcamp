@@ -149,8 +149,12 @@ let person = { // Curly brackets
     }, // Pre-ES6
     jump() {
         console.log("Hey estoy saltando");
+    },
+    presentarse() {
+        console.log(`Mi nombre es ${this.name}, tengo ${this.age}, y mi pelo es ${this.blonde ? "Rubio" : "Moreno"}`);
     }
 }
+
 
 // Acceso por punto / Dot notation
 console.log(person);
@@ -266,3 +270,120 @@ console.log("El número secreto es mayor");
 } else {
     console.log("El número secreto es menor");
 } 
+
+// Ternary operator/ Operador ternario //
+
+let variable = 12 < 10 ? "es menor" : "el primero es mayor";
+console.log(variable);
+
+person.presentarse();
+
+
+// Switch -------------
+
+let option = 1;
+
+switch (option) {
+    case 1:
+        //Bloque de código para valor 1
+        console.log("Option vale", option);
+        break;
+    case 2:
+        //Bloque de código para valor 2
+        console.log("Option vale 2");
+        break;
+    case 3:
+        //Bloque de código para valor 3
+        console.log("Option vale 3");
+        break;
+    default:
+        // De otro modo 
+        console.log("otra opción");
+        break; // Hay que ponerlo siempre
+}
+
+//--------------- Functions/Funciones -----------------
+console.clear();
+
+function suma(num1, num2) {
+    return num1 + num2;
+}
+
+console.log(suma(2, 2));
+
+function greet(name, lastName) {
+    console.log(`Hola, ${name} ${lastName}, ¿Que tal?`);
+}
+
+greet();
+greet("Marcos", "Aurelio");
+
+
+function square(num1) {
+    return num1 * num1; // Return rompe y para la funcion, lo que haya detras no se lee
+}
+
+console.log(square(2));
+
+// Anónimas 
+let numbersArray = [5, 51, 1, 2, 15];
+console.log(numbersArray);
+numbersArray.sort(); // Me lo ordena según ASCII
+console.log(numbersArray);
+
+
+function orderNumbers (a, b) {
+    if (a < b) {
+        return -1;
+    } else if (a === b) {
+        return 0;                // Es lo mismo que poner a - b
+    } else {
+        return 1;
+    }
+}
+
+
+numbersArray.sort(function (a, b) {return a - b});
+console.log(numbersArray);
+
+// numbersArray.sort(orderNumbers);
+// console.log(numbersArray);
+
+// Anónima de flecha / Arrow functions
+
+const perimeterOfSquare = (side) => 4*side;
+
+console.log(perimeterOfSquare(5));
+
+console.log(typeof function () {});
+console.log(typeof (() => {}));
+
+console.log(numbersArray.sort((a, b) => a - b));
+
+
+// -------------------- Loops --------------------
+// For
+for (let i = 0; i <= 10; i++) {
+    console.log(`Indice: ${i}`);
+}
+
+emptyArray = [];
+
+for (let i = 0; i <= 10; i++) {
+    emptyArray.push(i);
+}
+
+console.log(emptyArray);
+
+
+// While
+
+// while (true) { while infinito
+
+
+
+// ForEach
+
+numbersArray.forEach(function (value, index) {
+    console.log(`Indice ${index}: ${value}`);
+});
