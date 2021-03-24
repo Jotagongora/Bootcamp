@@ -373,7 +373,7 @@ for (let i = 0; i <= 10; i++) {
     emptyArray.push(i);
 }
 
-console.log(emptyArray);
+console.log(`Array rellena`, emptyArray);
 
 
 // While
@@ -384,6 +384,48 @@ console.log(emptyArray);
 
 // ForEach
 
-numbersArray.forEach(function (value, index) {
-    console.log(`Indice ${index}: ${value}`);
-});
+numbersArray.forEach((value, index) => console.log(`Indice ${index}: ${value}`));
+
+
+let otherArray = [];
+
+numbersArray.forEach(item => otherArray.push(item));
+
+console.log(`Array copiada`, otherArray);
+
+// For of
+
+for (let item of numbersArray) {
+    console.log(item);
+}
+
+//Continue
+
+for (let i = 0; i < 5; i++) {
+    if (i % 2 === 1) {
+        continue;
+    }
+    console.log("using continue", i );
+}
+
+//Break
+
+let j = 0;
+let k;
+
+mainLoop: while (true) {
+    console.log("Outer loop", 1);
+    j++;
+    k = 1;
+    while(true) {
+        console.log("Inner loop", k);
+        k++;
+        if (k === 5 && j === 5) {
+            break mainLoop;
+        } else if (k===5) {
+            break;
+        }
+    }
+}
+
+

@@ -5,6 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheatsheet JavaScript</title>
+    <style>
+        a {
+            font-size: 3em;
+            display: block;
+        }
+
+        .grandparent {
+            height: 500px;
+            background-color: brown;
+        }
+
+        .grandparent, .grandparent div {
+            border: 5px solid black;
+            box-sizing: border-box;
+            display: flex;
+            flex-grow: 1;
+            gap: 25px;
+            padding: 25px;
+        }
+
+        .parent {
+            background-color: darkcyan;
+        }
+
+        .child {
+            background-color: khaki;
+        }
+    </style>
 </head>
 <body>
     
@@ -15,6 +43,17 @@
 
 
 
+    <h1>Acceso al DOM</h1>
+    <div class="grandparent" id="grandparent">
+        <div class="parent" id="parent1">
+            <div class="child" id="child1">Child1</div>
+            <div class="child" id="child2">Child2</div>
+        </div>
+        <div class="parent" id="parent2">
+            <div class="child" id="child3">Child3</div>
+            <div class="child" id="child4">Child4</div>
+        </div>
+    </div>
 
 
     <script>
@@ -24,6 +63,7 @@
         }
         document.getElementsByTagName("a").item(1).addEventListener("click", saludo);
     </script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/DOM.js"></script>
 </body>
 </html>
