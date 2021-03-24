@@ -44,5 +44,5 @@ console.log(element);
 document.getElementsByClassName("parent")[0].style.backgroundColor = "#fff";
 document.getElementsByClassName("parent")[1].style.backgroundColor = "#333";
 
-
+document.querySelector("*").style.backgroundColor = "#ddd"
 
