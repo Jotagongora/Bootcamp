@@ -44,7 +44,7 @@ console.log(element);
 // document.getElementsByClassName("parent")[0].style.backgroundColor = "#fff";
 // document.getElementsByClassName("parent")[1].style.backgroundColor = "#333";
 
-document.querySelector("*").style.backgroundColor = "#ddd";
+// document.querySelector("*").style.backgroundColor = "#ddd";
 
 // children[0].parentNode.style.backgroundColor = "#156";
 
@@ -132,7 +132,54 @@ let x = newFunction("div", "id#1", "child");
 
 parent1.appendChild(x);
 
+// Eventos
+
+const colorButton = document.getElementsByTagName("button")[0];
+
+colorButton.addEventListener("click", function (event) {
+    // console.log(event);
+    console.log(event.target);
+    // console.log(event.target.tagName);
+
+    if (event.ctrlKey) {
+        document.body.classList.toggle("bg-red");
+    }
+
+    console.log(`X: ${event.clientX} | Y: ${event.clientY}`);
+    console.log(`Alt: ${event.altKey}. Shift: ${event.shiftKey}. Ctrl: ${event.ctrlKey}`);
+});
+
+const emailInput = document.getElementById("emailInput");
+
+emailInput.addEventListener("focus", inputListener)
+emailInput.addEventListener("blur", inputListener)
+
+function inputListener (e) {
+    console.log("Tipo de evento", e.type);
+    // e.target.style.border = "2px solid green"
+
+    if (e.type === "focus") {
+        e.target.classList.add("bg-border-green");
+    } else if (e.type === "blur") {
+        e.target.classList.remove("bg-border-green");
+    }
+}
 
 
+const changeTitle = e => {
+    document.querySelectorAll("h1")[2].textContent = emailInput.value;
+}
 
+emailInput.addEventListener("keydown", inputListener);
+emailInput.addEventListener("keyup", changeTitle);
 
+const container = document.querySelector("#container");
+
+container.addEventListener("mouseover", inputListener);
+container.addEventListener("mouseout", inputListener);
+
+function coords (e) {
+    document.querySelectorAll("h1")[3].textContent = `X: ${e.clientX} | Y: ${e.clientY}`;
+}
+
+document.body.addEventListener("mousemove", coords);
