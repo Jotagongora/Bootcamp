@@ -27,6 +27,10 @@ let myBooleanfunction = function (x) {
 console.log(typeof myArgument1);
 console.log(myBooleanfunction(myArgument1));
 
+/* function isBoolean(value) {
+    return typeof value === "boolean";
+}
+
 /* EJERCICIO 4 */ 
 
 let myFunction1 = function (x) {
@@ -63,9 +67,7 @@ console.log(daysOfLife(2));
 
 let array3 = ["verde", "rojo", "amarillo", "azul"]
 
-returnLastElement = function (x) {
-   return x[x.length - 1];
-}
+returnLastElement = array => array[array.length - 1];
 
 console.log(returnLastElement(array1));
 console.log(returnLastElement(array2));
@@ -73,15 +75,13 @@ console.log(returnLastElement(array3));
 
 /* EJERCICIO 9 */
 
-let countLegs = function (pollo, vaca, cerdo) {
-    return pollo*2 + vaca*4 + cerdo*4;
-}
+let countLegs = (pollo, vaca, cerdo) => pollo*2 + vaca*4 + cerdo*4;
 
 console.log(countLegs(5, 2, 8));
 
 /* EJERCICIO 10*/
 
-let comparationFunction = function(a, b) {
+const comparationFunction = function(a, b) {
     if (typeof a === typeof b) {
         return true;
     } else {
@@ -89,11 +89,14 @@ let comparationFunction = function(a, b) {
     }
 }
 
+ const comparationFunction2 = (a, b) => (typeof a === typeof b) ? true : false;
+
 console.log(comparationFunction(false, true));
+console.log(comparationFunction2(false, true));
 
 /* EJERCICIO 11 */
 
-let string1 = "Juan Alberto es un crack en JS";
+let string1 = "Juan Alberto es un crack en JS.";
 
 const stringSeparation = function(x) {
     return x.split(" ");
@@ -128,8 +131,8 @@ let adress2 = {
 /* EJERCICIO 13 */
 
 const parseDomain = function (x) {
-    array = x.split(".");
-    object = {
+    const array = x.split(".");
+    const object = {
         Domain: array[0],
         TLD: array[1]
     }
@@ -150,8 +153,13 @@ const strictEquality = function (a, b) {
     }
 }
 
+const strictEquality2 = (a, b) => (a == b) && (typeof a == typeof b);
+
 console.log(strictEquality(5, "5"));
 console.log(strictEquality(5, 5));
+
+console.log(strictEquality2(5, "5"));
+console.log(strictEquality2(5, 5));
 
 /* EJERCICIO 15 */
 
@@ -163,8 +171,13 @@ const lengthEquality = function(a, b) {
     }
 }
 
+const lengthEquality2 = (a, b) => (a.length === b.length);
+
 console.log(lengthEquality("hola", "casa"));
 console.log(lengthEquality("hola", "casas"));
+
+console.log(lengthEquality2("hola", "casa"));
+console.log(lengthEquality2("hola", "casas"));
 
 /* EJERCICIO 16 */
 
@@ -212,39 +225,39 @@ console.log(repeatString("No haré memes del profesor. ", 3));
 /* EJERCICIO 19 */ 
 
 let object2 = {
-    upVotes: 55,
-    downVotes: 50
+    upVotes: 35,
+    downVotes: 15
 }
 
-const getVoteCount = function(x) {
-    return console.log(x.upVotes - x.downVotes);
+const getVoteCount = function(obj) {
+    return obj.upVotes - obj.downVotes;
 }
 
-getVoteCount(object2);
+console.log(getVoteCount(object2));
 
 /* EJERCICIO 20 */ 
 
 const getTypes = function(array) {
-    let newArray = [];
+    const newArray = [];
     array.forEach(element => newArray.push(typeof element));
-    return console.log(newArray);
+    return newArray;
 }
 
-getTypes(["I'm learning JS in a bootcamp", 7.5, {}, 0, undefined, [], "codespace"]);
+console.log(getTypes(["I'm learning JS in a bootcamp", 7.5, {}, 0, undefined, [], "codespace"]));
 
 /* EJERCICIO 21 */
 
 const getParsedNumbers = function(array) {
     let newArray = [];
     array.forEach(element => newArray.push(parseFloat(element)));
-return console.log(newArray);
+return newArray;
 }
 
-getParsedNumbers(["1.5", "10", "0"]);
+console.log(getParsedNumbers(["1.5", "10", "0"]));
 
 /* EJERCICIO 22 */
 
-const numberSign = number => {if (number >= 0) {return "Postivo";} else {return "Negativo";}} 
+const numberSign = number => number >= 0 ? "Postivo" : "Negativo"; 
 
 console.log(numberSign(-10));
 
@@ -262,12 +275,12 @@ console.log(array4);
 
 /* EJERCICIO 24 */
 
-let array5 = [2, 5, 7, 9, 2, 3, 2, 6, 2];
+let array5 = [2, 2, 5, 7, 9, 2, 3, 2, 6, 2];
 
 const filterNumbers = function(array, value) {
     while (array.indexOf(value) !== -1) {
-   let index = array.indexOf(value);
-   arrayRemoveElement(array, index);
+        let index = array.indexOf(value);
+        arrayRemoveElement(array, index);
     }
 }
 
@@ -310,3 +323,45 @@ const stringReverse = function(string) {
 
 console.log(stringReverse(".nóicamargorp ed sedrat sal ne éfac led érasuba oN"));
 
+
+/* EJERCICIO 27 */ 
+
+
+const compareStrings = function(a, b) {
+    if (a.toLowerCase() === b.toLowerCase()) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+console.log(compareStrings("Darth CODER", "darth coder"));
+
+/* EJERCICIO 28 */ 
+
+const capitalize = function(string) {
+    const array = string.split(" ");
+    for (i = 0; i <= array.length - 1; i++) {
+        array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);   
+    }
+    const finalString = array.join(" ");
+    return finalString;
+}
+
+// const capitalize2 = function (string) {
+//     const array = string.split(" ");
+//     array.forEach(element => element.charAt(0).toUpperCase() + element.slice(1));
+//     const finalString = array.join(" ");
+//     return finalString;
+// }
+
+
+console.log(capitalize("comprobaré los errores de la consola antes de pedir ayuda."));
+// console.log(capitalize2("comprobaré los errores de la consola antes de pedir ayuda."));
+
+/* EJERCICIO 29 */
+
+const booleanOpposite = boolean => !boolean;
+
+console.log(booleanOpposite(true));
