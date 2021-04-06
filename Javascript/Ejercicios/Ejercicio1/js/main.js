@@ -40,6 +40,62 @@ const textInput = document.getElementsByTagName("input")[0];
 
 const textButton = document.getElementsByTagName("button")[1];
 
+const keyInput = document.getElementsByTagName("input")[1];
+
 textButton.addEventListener("click", function () {
     document.getElementById("pApartado4").textContent = textInput.value;
+    textInput.value = "";
 })
+
+keyInput.addEventListener("input", function () {
+    document.getElementById("pApartado4").textContent = keyInput.value;
+})
+
+
+const textArea = document.getElementsByTagName("textarea")[0];
+const textButton2 = document.getElementsByTagName("button")[2];
+
+textButton2.addEventListener("click", function () {
+    if (textArea.value.length > 15) {
+    document.getElementById("pApartado5").textContent = textArea.value;
+    textArea.style.color = "green";
+    } else {
+        alert("Debes introducir al menos 15 carácteres")
+    }
+});
+
+const parInput = document.getElementsByTagName("input")[2];
+const parButton = document.getElementsByTagName("button")[3];
+
+parButton.addEventListener("click", function () {
+    if (parInput.value % 2 === 0) {
+        parInput.classList.remove("border-red");
+    } else {
+        parInput.classList.add("border-red");
+    }
+})
+
+const ap7ul = document.getElementsByTagName("ul")[1];
+
+for (i = 1; i <= 10; i++) {
+    let ap7li = document.createElement("li");
+    ap7li.textContent = `Elemento ${i}`;
+    ap7ul.appendChild(ap7li);
+}
+
+/* Apartado 8 */
+
+const newTabButton = document.querySelector("#newTab");
+const link = document.querySelector("a");
+
+newTabButton.addEventListener("click", () => link.setAttribute("target", "blank"));
+
+
+/* Apartado 9 */
+
+const ap9Paragraph = document.querySelector("#colorsParagraph");
+document.querySelector("#colorsSelect").addEventListener("change", e => {
+    ap9Paragraph.style.color = e.target.value;
+})
+
+

@@ -297,62 +297,57 @@ let coche = {
     Matríucla: "LMP-5780"
 }
 
-const propertiesArray = function(x) {
-    let newArray = Object.keys(x);
-    return console.log(newArray);
+const propertiesArray = function(object) {
+    return Object.keys(object);
 }
 
-propertiesArray(coche);
+console.log(propertiesArray(coche));
 
-const valuesArray = function(x) {
-    let newArray = Object.values(x);
-    return console.log(newArray);
+const valuesArray = function(object) {
+    return Object.values(object);
 }
 
-valuesArray(coche);
+console.log(valuesArray(coche));
 
 /* EJERCICIO 26 */
 
 const stringReverse = function(string) {
     let newString = "";
-    for (let i = string.length; i >= 0; i--) {
-        newString = newString + string.charAt(i);
+    for (let i = string.length - 1; i >= 0; i--) {
+        newString += string[i];
     }
     return newString;
 }
 
+const stringReverse2 = (string) => (string.split("").reverse().join(""));
+
+
+console.log(stringReverse2(".nóicamargorp ed sedrat sal ne éfac led érasuba oN"))
 console.log(stringReverse(".nóicamargorp ed sedrat sal ne éfac led érasuba oN"));
 
 
 /* EJERCICIO 27 */ 
 
 
-const compareStrings = function(a, b) {
-    if (a.toLowerCase() === b.toLowerCase()) {
-        return true;
-    } else {
-        return false;
-    }
-
-}
+const compareStrings = (a, b) => (a.toLowerCase() === b.toLowerCase()) ? true : false;
 
 console.log(compareStrings("Darth CODER", "darth coder"));
 
 /* EJERCICIO 28 */ 
 
 const capitalize = function(string) {
-    const array = string.split(" ");
-    for (i = 0; i <= array.length - 1; i++) {
-        array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);   
+    const words = string.split(" ");
+    for (i = 0; i <= words.length - 1; i++) {
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);   
     }
-    const finalString = array.join(" ");
+    const finalString = words.join(" ");
     return finalString;
 }
 
 // const capitalize2 = function (string) {
-//     const array = string.split(" ");
-//     array.forEach(element => element.charAt(0).toUpperCase() + element.slice(1));
-//     const finalString = array.join(" ");
+//     const words = string.split(" ");
+//     words.forEach(element => element[0].toUpperCase() + element.slice(1));
+//     const finalString = words.join(" ");
 //     return finalString;
 // }
 
