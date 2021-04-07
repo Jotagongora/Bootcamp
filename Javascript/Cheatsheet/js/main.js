@@ -197,6 +197,27 @@ person3.talk()
 
 console.log(this);
 
+//Object Constructor using functions
+
+function Car(brand, color, weight, topSpeed) {
+    this.brand = brand;
+    this.color = color;
+    this.weight = weight;
+    this.topSpeed = topSpeed;
+    this.getDescription = function () {
+        return `This ${this.color} ${this.brand} weights ${weight}` +
+        `kilos and can reach up to ${this.topSpeed}kms/h`
+    }
+}
+
+const car1 = new Car("Mercedes", "red", 2000, 200);
+const car2 = new Car("Volvo", "white", 2500, 180);
+const car3 = new Car("Volkswagen", "blue", 1500, 175);
+
+console.log(car1, car2, car3);
+
+console.log(car3.getDescription());
+
 //-------------------- Arrays --------------------------
 
 console.clear();

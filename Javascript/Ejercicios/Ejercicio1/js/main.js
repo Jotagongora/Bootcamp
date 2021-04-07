@@ -98,4 +98,31 @@ document.querySelector("#colorsSelect").addEventListener("change", e => {
     ap9Paragraph.style.color = e.target.value;
 })
 
+/* Apartado 10 */
+
+const currentRandom = document.getElementById("currentRandom");
+const totalNumbers = document.getElementById("totalNumbers");
+const oddNumbers = document.getElementById("oddNumbers");
+const evenNumbers = document.getElementById("evenNumbers");
+
+
+
+document.getElementById("randomButton").onclick = () => {
+    const randomNumber = Math.floor(Math.random() * 100);
+    currentRandom.textContent = randomNumber;
+
+    totalNumbers.textContent++;
+
+    randomNumber % 2 === 0 ? evenNumbers.textContent++ : oddNumbers.textContent++;
+};
+
+/* Apartado 12 */
+
+document.querySelector("#toggle").onclick = (e) => e.target.classList.toggle("btn");
+
+/* Ejercico 1 */
+
+const buttons = document.getElementsByClassName("btn2");
+
+Array.from(buttons).forEach(button => button.onclick = (e) => e.target.classList.toggle("bg-darkcyan"));
 
