@@ -382,6 +382,90 @@ console.log(typeof (() => {}));
 console.log(numbersArray.sort((a, b) => a - b));
 
 
+// Higher Order Functions
+// Map
+
+let arr1 = [1, 2, 3];
+let arr2 = [];
+
+for (let num of arr1) {
+    arr2.push(num * 2);
+}
+
+console.log(arr2);
+
+arr1 = [1, 2, 3];
+arr2 = arr1.map(number => number * 2);
+
+
+// Apartir de un array con años de nacimiento, calcular edades//
+
+const birthYears = [1980, 1990, 1975, 1970];
+
+const ages = birthYears.map(year => 2021 - year);
+
+console.log(ages);
+
+//Filter
+
+const prices = [150, 50, 49, 51, 15, 237];
+let expensivePrices = [];
+
+for (let price of prices) {
+    if (price >= 50) {
+        expensivePrices.push(price);
+    }
+};
+
+console.log(expensivePrices);
+
+prices = [150, 50, 49, 51, 15, 237];
+
+expensivePrices = prices.filter(price => price >= 50);
+
+console.log(expensivePrices);
+
+
+const cars = [
+    {
+        brand: "BMW",
+        year: 2010,
+        plateNumber: "HGJ1245"
+    },
+    {
+        brand: "Mercedes",
+        year: 1999,
+        plateNumber: "BXC1245"
+    },
+    {
+        brand: "Volvo",
+        year: 2021,
+        plateNumber: "HAS1245"
+    },
+    {
+        brand: "Volvo",
+        year: 2035,
+        plateNumber: "RCF1245"
+    }
+];
+
+console.log(cars.filter(car => car.year > 2008));
+
+const plateNumbersArr = cars.map(car => car.plateNumber)
+
+console.log(plateNumbersArr);
+
+
+//Sort//
+
+cars.sort((car1, car2) => car1.year - car2.year);
+
+console.log(cars);
+
+cars.sort((car1) => (car1 === "Volvo") ? 1 : -1);
+
+console.log(cars);
+
 // -------------------- Loops --------------------
 // For
 for (let i = 0; i <= 10; i++) {

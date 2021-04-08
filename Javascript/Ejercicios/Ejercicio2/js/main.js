@@ -57,11 +57,9 @@ function fillList(user) {
 function processProducts(e) {
     const selectedUser = users.find(user => user.name == select.value);
 
-    if (e.target === incrementButton) {
-        selectedUser.incrementProducts();
-    } else {
-        selectedUser.emptyProducts();
-    }
+    e.target === incrementButton
+    ? selectedUser.incrementProducts()
+    : selectedUser.emptyProducts();
 
     fillList(selectedUser);
 };
