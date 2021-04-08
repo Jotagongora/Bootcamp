@@ -1,11 +1,11 @@
-function User(name, firstLastName, secondLastName, email, age, city, productsCount) {
+function User(name, firstLastName, secondLastName, email, age, city) {
     this.name = name;
     this.firstLastName = firstLastName;
     this.secondLastName = secondLastName;
     this.email = email;
     this.age = age;
     this.city = city;
-    this.productsCount = productsCount;
+    this.productsCount = 0;
     this.incrementProducts = function () {
         this.productsCount++;
     };
@@ -37,15 +37,50 @@ users.forEach(user => {
 /* Rellenar lista con datos de un usuario cualquiera*/
 
 
+function fillList(user) {
 
-for (const property in users[0]) {
-    const li = document.createElement("li");
-    li.classList.add("list-group-item");
-    li.textContent = `${property}: ${users[0][property]}`;
-    list.appendChild(li);
+    list.innerHTML = "";
+
+    for (const property in user) {
+        const value = user[property];
+        
+        if (typeof value !== "function") {
+        const li = document.createElement("li");
+        li.classList.add("list-group-item");
+        li.innerHTML = `<b>${property}:</b> ${value}`;
+        list.appendChild(li);
+         // list.innerHTML += `<li class="list-group-item"><b>${property}:</b> ${value}<li/>`
+        }
+    }
+};
+
+function processProducts(e) {
+    const selectedUser = users.find(user => user.name == select.value);
+
+    if (e.target === incrementButton) {
+        selectedUser.incrementProducts();
+    } else {
+        selectedUser.emptyProducts();
+    }
+
+    fillList(selectedUser);
 };
 
 
+/* Añadir listenners */ 
+
+select.addEventListener("change", () => {
+    const selectedUser = users.find(user => user.name === select.value);
+    fillList(selectedUser);
+});
+
+fillList(users[0]);
+
+processProducts;
+
+incrementButton.addEventListener("click", processProducts);
+
+emptyButton.addEventListener("click", processProducts);
 
 
 
