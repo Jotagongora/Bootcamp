@@ -7,7 +7,6 @@ function Book (ID, title, author, sales, price) {
 }
 
 
-
 const books = [
     new Book("#", "Title", "Author", "Sales", "Price"),
     new Book("1", "The name of the wind", "Patrick Rothfuss", 840120, 18),
@@ -59,7 +58,7 @@ function fillTable(books) {
             const td = document.createElement("td");
             tr.appendChild(td);
             td.appendChild(removeButton);
-            removeButton.textContent = "Eliminar";
+            removeButton.textContent = "Delete";
             removeButton.classList.add("btn-danger");
             removeButton.setAttribute("onclick", `removeRow(${i})`);
         }
