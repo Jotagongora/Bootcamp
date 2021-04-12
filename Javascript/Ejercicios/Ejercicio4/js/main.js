@@ -9,16 +9,16 @@ function Book (ID, title, author, sales, price) {
 
 const books = [
     new Book("#", "Title", "Author", "Sales", "Price"),
-    new Book("1", "The name of the wind", "Patrick Rothfuss", 840120, 18),
-    new Book("2", "The wise man's fear", "Patrick Rothfuss", 750320, 17),
-    new Book("3", "Los caminantes", "Carlos sisí", 520123, 12),
-    new Book("4", "Way of kings", "Brandon Sanderson", 630220, 17),
+    new Book("1", "The Name of The Wind", "Patrick Rothfuss", 840120, 18),
+    new Book("2", "The Wise Man's Fear", "Patrick Rothfuss", 750320, 17),
+    new Book("3", "Los Caminantes", "Carlos sisí", 520123, 12),
+    new Book("4", "Way of Kings", "Brandon Sanderson", 630220, 17),
     new Book("5", "Elantris", "Brandon Sanderson", 720300, 14),
-    new Book("6", "Words of radiance", "Brandon Sanderson", 720320, 15),
+    new Book("6", "Words of Radiance", "Brandon Sanderson", 720320, 15),
     new Book("7", "Homeland", "R.A. Salvatore", 850300, 13),
     new Book("8", "Exile", "R.A. Salvatore", 630450, 12),
     new Book("9", "Sojourn", "R.A. Salvatore", 630450, 14),
-    new Book("10", "The host", "Stephanie Meyer", 420200, 12)
+    new Book("10", "The Host", "Stephanie Meyer", 420200, 12)
 ];
 
 const booksTable = document.getElementById("booksTable");
@@ -59,7 +59,7 @@ function fillTable(books) {
             tr.appendChild(td);
             td.appendChild(removeButton);
             removeButton.textContent = "Delete";
-            removeButton.classList.add("btn-danger");
+            removeButton.classList.add("btn", "btn-danger");
             removeButton.setAttribute("onclick", `removeRow(${i})`);
         }
     };
@@ -72,6 +72,8 @@ function removeRow(index) {
     books.splice(index, 1);
     fillTable(books);
 }
+
+
 
 
 
