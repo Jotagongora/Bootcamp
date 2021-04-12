@@ -9,16 +9,16 @@ function Book (ID, title, author, sales, price) {
 
 const books = [
     new Book("#", "Title", "Author", "Sales", "Price"),
-    new Book("1", "The Name of The Wind", "Patrick Rothfuss", 840120, 18),
-    new Book("2", "The Wise Man's Fear", "Patrick Rothfuss", 750320, 17),
-    new Book("3", "Los Caminantes", "Carlos sisí", 520123, 12),
-    new Book("4", "Way of Kings", "Brandon Sanderson", 630220, 17),
-    new Book("5", "Elantris", "Brandon Sanderson", 720300, 14),
-    new Book("6", "Words of Radiance", "Brandon Sanderson", 720320, 15),
-    new Book("7", "Homeland", "R.A. Salvatore", 850300, 13),
-    new Book("8", "Exile", "R.A. Salvatore", 630450, 12),
-    new Book("9", "Sojourn", "R.A. Salvatore", 630450, 14),
-    new Book("10", "The Host", "Stephanie Meyer", 420200, 12)
+    new Book(1, "The Name of The Wind", "Patrick Rothfuss", 840120, 18),
+    new Book(2, "The Wise Man's Fear", "Patrick Rothfuss", 750320, 17),
+    new Book(3, "Los Caminantes", "Carlos sisí", 520123, 12),
+    new Book(4, "Way of Kings", "Brandon Sanderson", 630220, 17),
+    new Book(5, "Elantris", "Brandon Sanderson", 720300, 14),
+    new Book(6, "Words of Radiance", "Brandon Sanderson", 720320, 15),
+    new Book(7, "Homeland", "R.A. Salvatore", 850300, 13),
+    new Book(8, "Exile", "R.A. Salvatore", 630450, 12),
+    new Book(9, "Sojourn", "R.A. Salvatore", 630450, 14),
+    new Book(10, "The Host", "Stephanie Meyer", 420200, 12)
 ];
 
 const booksTable = document.getElementById("booksTable");
@@ -28,6 +28,7 @@ const authorInput = document.querySelector("#authorInput");
 const salesInput = document.querySelector("#salesInput");
 const priceInput = document.querySelector("#priceInput");
 const saveButton = document.querySelector("#saveButton");
+
 
 function fillTable(books) {
 
@@ -77,12 +78,9 @@ function removeRow(index) {
 
 
 
-saveButton.addEventListener("click", () => {
+saveButton.addEventListener("click", (e) => {
+    e.preventDefault();
     books.push(new Book(undefined, titleInput.value, authorInput.value, salesInput.value, priceInput.value));
-    titleInput.value = "";
-    authorInput.value = "";
-    salesInput.value = "";
-    priceInput.value = "";
     fillTable(books);
 });
 
