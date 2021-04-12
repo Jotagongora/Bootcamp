@@ -1,0 +1,47 @@
+function Book(id, title, author, sales, price) {
+    this.id = id,
+    this.title = title,
+    this.author = author,
+    this.sales = sales,
+    this.price = price
+};
+
+const books = [
+    new Book(1, "The Name of The Wind", "Patrick Rothfuss", 840120, 18),
+    new Book(2, "The Wise Man's Fear", "Patrick Rothfuss", 750320, 17),
+    new Book(3, "Los Caminantes", "Carlos sisí", 520123, 12),
+    new Book(4, "Way of Kings", "Brandon Sanderson", 630220, 17),
+    new Book(5, "Elantris", "Brandon Sanderson", 720300, 14),
+    new Book(6, "Words of Radiance", "Brandon Sanderson", 720320, 15),
+    new Book(7, "Homeland", "R.A. Salvatore", 850300, 13),
+    new Book(8, "Exile", "R.A. Salvatore", 630450, 12),
+    new Book(9, "Sojourn", "R.A. Salvatore", 630450, 14),
+    new Book(10, "The Host", "Stephanie Meyer", 420200, 12)
+]
+
+
+const tableBody = document.querySelector("#tableBody");
+const searchInput = document.querySelector("#searchInput");
+
+const booksDisplayed = books;
+
+booksDisplayed.forEach(book => {
+    tableBody.innerHTML += `
+    <tr>
+        <td>${book.id}</td>
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.sales}</td>
+        <td>${book.price}</td>
+    <tr>`;
+});
+
+
+
+searchInput.addEventListener("keyup", (e) => {
+   if (booksDisplayed.includes(e.key)) {
+   booksDisplayed = booksDisplayed.filter(book => book);
+   }
+});
+
+
