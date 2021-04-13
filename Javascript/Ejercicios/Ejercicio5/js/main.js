@@ -22,10 +22,17 @@ const books = [
 
 const tableBody = document.querySelector("#tableBody");
 const searchInput = document.querySelector("#searchInput");
+const orderButton = document.querySelector("#orderButton")
 
-let booksDisplayed = [];
+let booksDisplayed = books;
 
-books.forEach(book => {
+updateTable();
+
+function updateTable() {
+
+tableBody.innerHTML = "";
+
+booksDisplayed.forEach(book => {
     tableBody.innerHTML += `
     <tr>
         <td>${book.id}</td>
@@ -34,20 +41,28 @@ books.forEach(book => {
         <td>${book.sales}</td>
         <td>${book.price}</td>
     <tr>`;
-});
+})};
 
 
 
-searchInput.addEventListener("input", (e) => {
-    books.filter(book => {
-        for (const property in book) {
-          if (book[property] === searchInput.value) {
-              console.log(book[property]);
-              booksDisplayed.push(book);
-          }
-        }
-    })
+searchInput.addEventListener("input", () => {
+    booksDisplayed = books.filter(book =>
+        book.title.toLowerCase().includes(searchInput.value));
+        updateTable();
 })
- 
 
 
+orderButton.addEventListener("click",(e) => {
+    orderFuction();
+    updateTable();
+}) 
+
+function orderFuction() {
+    if (orderButton.classList.contains("growing")) {
+    booksDisplayed.sort((book1, book2) => book2.price - book1.price);
+    orderButton.classList.remove("growing");
+    } else {
+        booksDisplayed.sort((book1, book2) => book1.price - book2.price);
+        orderButton.classList.add("growing");
+    }
+};
