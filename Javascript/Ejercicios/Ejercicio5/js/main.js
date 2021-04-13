@@ -23,9 +23,9 @@ const books = [
 const tableBody = document.querySelector("#tableBody");
 const searchInput = document.querySelector("#searchInput");
 
-const booksDisplayed = books;
+let booksDisplayed = [];
 
-booksDisplayed.forEach(book => {
+books.forEach(book => {
     tableBody.innerHTML += `
     <tr>
         <td>${book.id}</td>
@@ -38,10 +38,16 @@ booksDisplayed.forEach(book => {
 
 
 
-searchInput.addEventListener("keyup", (e) => {
-   if (booksDisplayed.includes(e.key)) {
-   booksDisplayed = booksDisplayed.filter(book => book);
-   }
-});
+searchInput.addEventListener("input", (e) => {
+    books.filter(book => {
+        for (const property in book) {
+          if (book[property] === searchInput.value) {
+              console.log(book[property]);
+              booksDisplayed.push(book);
+          }
+        }
+    })
+})
+ 
 
 
