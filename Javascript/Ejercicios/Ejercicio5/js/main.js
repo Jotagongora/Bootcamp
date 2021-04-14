@@ -23,8 +23,9 @@ const books = [
 const tableBody = document.querySelector("#tableBody");
 const searchInput = document.querySelector("#searchInput");
 const orderButton = document.querySelector("#orderButton")
+const tableFooter = document.querySelector("#tableFooter");
 
-let booksDisplayed = books;
+let booksDisplayed = Array.from(books);
 
 updateTable();
 
@@ -41,13 +42,18 @@ booksDisplayed.forEach(book => {
         <td>${book.sales}</td>
         <td>${book.price}</td>
     <tr>`;
-})};
+    })
+
+    const totalPrice = booksDisplayed.reduce((priceSum, book) => priceSum + book.price, 0)
+    tableFooter.textContent = `Precio total : ${totalPrice}`;
+
+};
 
 
 
 searchInput.addEventListener("input", () => {
     booksDisplayed = books.filter(book =>
-        book.title.toLowerCase().includes(searchInput.value));
+        book.title.toLowerCase().includes(searchInput.value.toLowerCase()));
         updateTable();
 })
 
@@ -66,3 +72,6 @@ function orderFuction() {
         orderButton.classList.add("growing");
     }
 };
+
+
+
