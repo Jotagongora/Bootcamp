@@ -20,9 +20,9 @@ function Tienda() {
     }
     return (
         <div>
-            <Lista categoria="electronica" products2={tienda.electronica.map(product => <li>{product.producto}</li>)}/>
-            <Lista categoria="alimentacion" products={tienda.alimentacion} products2={tienda.alimentacion.forEach(product => product.producto)}/>
-            <Lista cateogira="mascotas" products={tienda.mascotas} products2={tienda.mascotas.forEach(product => product.producto)}/>
+            <Lista categoria="electronica" producto={tienda.producto}/>
+            <Lista categoria="alimentacion" producto={tienda.producto}/>
+            <Lista cateogira="mascotas" producto={tienda.producto}/>
         </div>
     )
 }

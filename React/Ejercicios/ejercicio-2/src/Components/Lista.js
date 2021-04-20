@@ -1,8 +1,17 @@
-function Lista() {
+
+
+function Lista(props) {
     return (
-        <div>
-            Soy una lista
-        </div>
+        props.producto.map(product => {
+            return (
+                <div>
+                    <h3>{props.categoria}</h3>
+                    <ul>
+                        <li>{product.producto}</li>
+                    </ul>
+                </div>
+            )
+        })
     )
 }
 
