@@ -1,4 +1,4 @@
-import Lista from './Lista';
+import {Lista} from './Lista';
 
 function Tienda() {
     const tienda = {
