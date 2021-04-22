@@ -1,10 +1,17 @@
-export default function Schedule(props) {
+export default function Schedule({contacts}) {
     return (
-        <div>
-            <ul>{props.map(contact => {
-                return (contact)
-            })}
-            </ul>
+        <div className="row">
+               {contacts.map((contact, index) => {
+                   return (
+                       <ul className="list-group mb-3 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3" key={contact.PhoneNumber}>
+                           <li className="list-group-item active">Contacto {index + 1}</li>
+                           <li className="list-group-item">{contact.Name}</li>
+                           <li className="list-group-item">{contact.Surname}</li>
+                           <li className="list-group-item">{contact.PhoneNumber}</li>
+                           <li className="list-group-item">{contact.Adress}, {contact.PostCode}, {contact.City}</li>
+                       </ul>
+                   )
+               })}
         </div>
     )
 }
