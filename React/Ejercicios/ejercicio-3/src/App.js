@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="container">
       <h2 className="my-3">Contact List</h2>
-      <Schedule contacts={contacts}/>
+      <Schedule contacts={contacts} setContacts={setContacts}/>
       <h2 className="mb-3">New Contact</h2>
       <Form setContacts={setContacts}/>
     </div>
