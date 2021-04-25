@@ -1,4 +1,4 @@
-export default function ToDoList({todos}) {
+export default function ToDoList({todos, setTodos}) {
 
     function crossOut(completed) {
         return (e) => {
@@ -9,6 +9,12 @@ export default function ToDoList({todos}) {
 
     let addClass = "";
 
+    function remove(ID) {
+        return () => {
+            setTodos(todos.filter(todo => todo.id !== ID))
+        }
+    }
+
     return(
         <div className=""><ul className="list-group">
             {todos.map(todo => {
@@ -18,7 +24,7 @@ export default function ToDoList({todos}) {
                     addClass = "list-group-item";
                 }
                 return (
-                        <li onClick={crossOut(todo.completed)} key={todo.id} className={addClass}>{todo.id - 1}: {todo.title} <button className="btn btn-danger">X</button></li>
+                        <li onClick={crossOut(todo.completed)} key={todo.id} className={addClass}>{todo.id - 1}: {todo.title} <button onClick={remove(todo.id)} className="btn btn-danger float-right">X</button></li>
                 )
             })}
             </ul>

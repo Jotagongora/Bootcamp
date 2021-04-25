@@ -20,7 +20,7 @@ function App() {
     <div className="container">
       <h3 className="text-center">To Do List</h3>
       <Input todos = {todos} setTodos = {setTodos} />
-      <ToDoList todos = {todos}/>
+      <ToDoList todos = {todos} setTodos = {setTodos}/>
     </div>
   );
 }

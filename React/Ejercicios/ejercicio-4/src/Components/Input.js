@@ -8,11 +8,14 @@ export default function Input({setTodos,todos}) {
         setCurrentInput(e.target.value);
         };
 
+    
+
     function addTodo(e) {
         e.preventDefault();
-        console.log(e.target.lastChild);
-        const newTodo = {id: todos.length + 1, title: currentInput, completed: false}
-        setTodos(todos => [newTodo,...todos])
+        const newTodo = {id: todos[0].id + 20, title: currentInput, completed: false};
+        setTodos(todos => [newTodo,...todos]);
+        e.target.children[0].value = "";
+        setCurrentInput("");
     }
 
     
