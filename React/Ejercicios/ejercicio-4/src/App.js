@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="container">
       <h3 className="text-center">To Do List</h3>
-      <Input />
+      <Input todos = {todos} setTodos = {setTodos} />
       <ToDoList todos = {todos}/>
     </div>
   );

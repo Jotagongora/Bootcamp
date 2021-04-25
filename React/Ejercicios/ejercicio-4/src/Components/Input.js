@@ -1,19 +1,26 @@
 import {useState} from 'react';
 
-export default function Input() {
+export default function Input({setTodos,todos}) {
 
     const [currentInput, setCurrentInput] = useState("");
 
-    function newTodo(e) {
+    function handleTitle(e) {
+        setCurrentInput(e.target.value);
+        };
+
+    function addTodo(e) {
         e.preventDefault();
-        setCurrentInput(e.target.children[0].value);
-        console.log(currentInput);
+        console.log(e.target.lastChild);
+        const newTodo = {id: todos.length + 1, title: currentInput, completed: false}
+        setTodos(todos => [newTodo,...todos])
     }
+
+    
 
     return (
         <div className="container">
-            <form onSubmit={newTodo}>
-            <input type="text" className="w-100 my-3" placeholder="Introduce un nuevo To-Do"/>
+            <form onSubmit={addTodo}>
+            <input onChange={handleTitle} type="text" className="w-100 my-3" placeholder="Introduce un nuevo To-Do"/>
             </form>
         </div>
     )

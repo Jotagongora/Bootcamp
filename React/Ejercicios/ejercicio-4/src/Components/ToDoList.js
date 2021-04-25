@@ -18,7 +18,7 @@ export default function ToDoList({todos}) {
                     addClass = "list-group-item";
                 }
                 return (
-                        <li onClick={crossOut(todo.completed)} key={todo.id} className={addClass}>{todo.id} {todo.title}</li>
+                        <li onClick={crossOut(todo.completed)} key={todo.id} className={addClass}>{todo.id - 1}: {todo.title} <button className="btn btn-danger">X</button></li>
                 )
             })}
             </ul>
