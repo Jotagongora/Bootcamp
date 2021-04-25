@@ -1,16 +1,20 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import ToDoList from './Components/ToDoList';
 import Input from './Components/Input';
 
 function App() {
 
-  const [todos, setTodos] = useState([
-    {userId: 1, title: "Ejercicio-1", Completed: "NO"},
-    {userId: 2, title: "Ejercicio-2", Completed: "NO"},
-    {userId: 3, title: "Ejercicio-3", Completed: "NO"}
-  ]);
+  const url = "https://jsonplaceholder.typicode.com/todos";
+
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    fetch(url)
+    .then(response => response.json())
+    .then(data => setTodos(data.slice(0, 20)))
+  }, []);
 
   return (
     <div className="container">

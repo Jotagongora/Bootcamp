@@ -1,18 +1,27 @@
 export default function ToDoList({todos}) {
 
-    function crossOut(e) {
-        console.log(e.target.userId);
+    function crossOut(completed) {
+        return (e) => {
+            (completed) ? (completed = !completed) : (completed = !completed);
+            e.target.classList.toggle("crossOut");
+        }
     }
 
+    let addClass = "";
+
     return(
-        <div className="">
+        <div className=""><ul className="list-group">
             {todos.map(todo => {
+                if (todo.completed === true) {
+                    addClass = "crossOut list-group-item";
+                } else {
+                    addClass = "list-group-item";
+                }
                 return (
-                    <ul className="list-group" key={todo.userId}>
-                        <li onClick={crossOut} className="list-group-item">{todo.userId} {todo.title} {todo.Completed}</li>
-                    </ul>
+                        <li onClick={crossOut(todo.completed)} key={todo.id} className={addClass}>{todo.id} {todo.title}</li>
                 )
             })}
+            </ul>
         </div>
     )
     
