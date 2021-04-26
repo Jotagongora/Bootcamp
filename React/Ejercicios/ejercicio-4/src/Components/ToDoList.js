@@ -1,9 +1,13 @@
+import './ToDoList.css';
 export default function ToDoList({todos, setTodos}) {
 
-    function crossOut(completed) {
+    function crossOut(index) {
         return (e) => {
-            (completed) ? (completed = !completed) : (completed = !completed);
-            e.target.classList.toggle("crossOut");
+            if (e.target.tagName !== "BUTTON") {
+            const newTodos = [...todos];
+            newTodos[index].completed = !newTodos[index].completed;
+            setTodos(newTodos);
+            }
         }
     }
 
@@ -17,14 +21,14 @@ export default function ToDoList({todos, setTodos}) {
 
     return(
         <div className=""><ul className="list-group">
-            {todos.map(todo => {
+            {todos.map((todo, index)=> {
                 if (todo.completed === true) {
-                    addClass = "crossOut list-group-item";
+                    addClass = "crossOut list-group-item  d-flex justify-content-between";
                 } else {
-                    addClass = "list-group-item";
+                    addClass = "list-group-item  d-flex justify-content-between";
                 }
                 return (
-                        <li onClick={crossOut(todo.completed)} key={todo.id} className={addClass}>{todo.id - 1}: {todo.title} <button onClick={remove(todo.id)} className="btn btn-danger float-right">X</button></li>
+                        <li onClick={crossOut(index)} key={todo.id} className={addClass}><span>{index}: {todo.title}</span><button onClick={remove(todo.id)} className="btn btn-danger">x</button></li>
                 )
             })}
             </ul>

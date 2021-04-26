@@ -6,12 +6,12 @@ import Input from './Components/Input';
 
 function App() {
 
-  const url = "https://jsonplaceholder.typicode.com/todos";
+  const API_Todos = "https://jsonplaceholder.typicode.com/todos";
 
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    fetch(url)
+    fetch(API_Todos)
     .then(response => response.json())
     .then(data => setTodos(data.slice(0, 20)))
   }, []);

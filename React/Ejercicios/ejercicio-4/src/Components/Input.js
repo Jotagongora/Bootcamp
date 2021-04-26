@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-export default function Input({setTodos,todos}) {
+export default function Input({setTodos}) {
 
     const [currentInput, setCurrentInput] = useState("");
 
@@ -8,13 +8,15 @@ export default function Input({setTodos,todos}) {
         setCurrentInput(e.target.value);
         };
 
+    const [ID, setID] = useState(21);
+
     
 
     function addTodo(e) {
         e.preventDefault();
-        const newTodo = {id: todos[0].id + 20, title: currentInput, completed: false};
-        setTodos(todos => [newTodo,...todos]);
-        e.target.children[0].value = "";
+        setID(ID + 1);
+        const newTodo = {id: ID, title: currentInput, completed: false};
+        setTodos(currentTodos => [newTodo,...currentTodos]);
         setCurrentInput("");
     }
 
@@ -23,7 +25,7 @@ export default function Input({setTodos,todos}) {
     return (
         <div className="container">
             <form onSubmit={addTodo}>
-            <input onChange={handleTitle} type="text" className="w-100 my-3" placeholder="Introduce un nuevo To-Do"/>
+            <input onChange={handleTitle} type="text" value={currentInput} className="w-100 my-3" placeholder="Introduce un nuevo To-Do"/>
             </form>
         </div>
     )
