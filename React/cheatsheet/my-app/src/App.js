@@ -4,6 +4,7 @@ import UseContextComponent from './components/UseContextComponent'
 import FirstComponent, {SecondComponent, ThirdComponent} from './components/FirstComponent';
 import Counter from './components/Counter';
 import UseEffectComponent from './components/UseEffectComponent'
+import Router from "./Router";
 
 export const GlobalContext = createContext({});
 
@@ -21,9 +22,10 @@ function App() {
       {/* <FirstComponent title="Otro título" date="22 de Agosto de 2025"/>
       <SecondComponent />
       // <ThirdComponent /> */} 
-      <GlobalContext.Provider value="Soy un string guardado en un contexto" >
+      {/* <GlobalContext.Provider value="Soy un string guardado en un contexto" >
       <UseContextComponent />
-      </GlobalContext.Provider>
+      </GlobalContext.Provider> */}
+      <Router />
     </div>
   );
 }
