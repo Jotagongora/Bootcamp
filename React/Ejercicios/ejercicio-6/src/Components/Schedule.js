@@ -1,4 +1,8 @@
-export default function Schedule({contacts, setContacts}) {
+import {useContext} from 'react';
+import {GlobalContext} from '../Router';
+export default function Schedule() {
+
+    const {contacts, setContacts} = useContext(GlobalContext);
     
     const removeContact = PhoneNumber => {
         return e => {

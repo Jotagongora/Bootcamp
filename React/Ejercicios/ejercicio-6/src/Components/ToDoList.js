@@ -1,5 +1,9 @@
+import {useContext} from 'react';
+import {GlobalContext} from '../Router';
 import './ToDoList.css';
-export default function ToDoList({todos, setTodos}) {
+export default function ToDoList() {
+
+    const {todos, setTodos} = useContext(GlobalContext);
 
     function crossOut(index) {
         return (e) => {

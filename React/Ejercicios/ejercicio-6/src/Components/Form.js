@@ -1,6 +1,10 @@
+import {useContext} from 'react';
+import {GlobalContext} from '../Router';
 import {useState} from 'react';
 
-export default function Form({setContacts}) {
+export default function Form() {
+
+    const {setContacts} = useContext(GlobalContext);
 
     const [Name, setName] = useState("");
     const [Surname, setSurname] = useState("");

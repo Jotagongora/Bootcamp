@@ -1,6 +1,9 @@
 import {useState} from 'react';
+import {useContext} from 'react';
+import {GlobalContext} from '../Router';
+export default function Input() {
 
-export default function Input({setTodos}) {
+    const {setTodos} = useContext(GlobalContext);
 
     const [currentInput, setCurrentInput] = useState("");
 
