@@ -27,8 +27,8 @@ export default function Router() {
         <div>
             <BrowserRouter>
                 <GlobalContext.Provider value={{setUpComings, upComings, img_url, setPage, page}}>
-                <Header />
-                <Upcoming/>
+                        <Header />
+                        <Upcoming/>
                 </GlobalContext.Provider>
                 
             </BrowserRouter>
