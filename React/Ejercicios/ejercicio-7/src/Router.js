@@ -28,7 +28,10 @@ export default function Router() {
             <BrowserRouter>
                 <GlobalContext.Provider value={{setUpComings, upComings, img_url, setPage, page}}>
                         <Header />
-                        <Upcoming/>
+                        <Switch>
+                            <Route exact path="/" component={Upcoming}/>
+                            <Route path="/details/:id"/>
+                        </Switch>
                 </GlobalContext.Provider>
                 
             </BrowserRouter>

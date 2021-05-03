@@ -22,6 +22,10 @@ export default function Upcoming() {
 
     return (
         <div>
+            <div>
+                <a onClick={handleClick} href="#">Previous</a>
+                <a onClick={handleClick} href="#">Next</a>
+            </div>
             <div className="movie">
                 {upComings.map(upComing => {
                     return (<div className="upcoming">
