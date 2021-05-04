@@ -1,12 +1,15 @@
 import React from 'react';
 import {useContext} from 'react';
 import {GlobalContext} from '../Router';
+import {NavLink, useHistory} from 'react-router-dom';
 
 
 
 export default function Upcoming() {
 
     const {upComings, img_url, setPage, page, setId} = useContext(GlobalContext);
+
+    let history = useHistory();
 
     function handleClick(e) {
         e.preventDefault();
@@ -16,7 +19,6 @@ export default function Upcoming() {
             setPage(currentPage => currentPage - 1)
         }
     }
-
 
 
 
@@ -31,7 +33,7 @@ export default function Upcoming() {
                     return (<div className="upcoming">
                             <img src={`${img_url}${upComing.poster_path}`} alt=""/>
                             <h1>{upComing.title}</h1>
-                            <button className="mb-3">More info</button>
+                            <NavLink to={`/${upComing.id}`}>More info</NavLink>
                             </div>
                         
                 )})}
