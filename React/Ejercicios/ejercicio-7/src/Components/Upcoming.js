@@ -7,7 +7,7 @@ import {NavLink, useHistory} from 'react-router-dom';
 
 export default function Upcoming() {
 
-    const {upComings, img_url, setPage, page, setId} = useContext(GlobalContext);
+    const {upComings, img_url, setPage, page} = useContext(GlobalContext);
 
     let history = useHistory();
 
@@ -20,6 +20,9 @@ export default function Upcoming() {
         }
     }
 
+    function movieId(movieId) {
+        history.push(`/${movieId}`);
+    }
 
 
     return (
@@ -31,9 +34,12 @@ export default function Upcoming() {
             <div className="movie">
                 {upComings.map(upComing => {
                     return (<div className="upcoming">
-                            <img src={`${img_url}${upComing.poster_path}`} alt=""/>
-                            <h1>{upComing.title}</h1>
-                            <NavLink to={`/${upComing.id}`}>More info</NavLink>
+                                <img src={`${img_url}${upComing.poster_path}`} alt=""/>
+                                <h1>{upComing.title}</h1>
+                                <div className="container">
+                                    <p>{upComing.overview}</p>
+                                </div>
+                                <button onClick={() => movieId(upComing.id)}>More info</button>
                             </div>
                         
                 )})}

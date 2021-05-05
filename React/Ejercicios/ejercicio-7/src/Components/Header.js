@@ -4,7 +4,9 @@ import {NavLink} from 'react-router-dom';
 export default function Header() {
     return (
         <div className="header">
-            <NavLink to="/">Home</NavLink>
+            <button>
+                <NavLink to="/">Back</NavLink>
+            </button>
             <h1>Film Premieres</h1>
         </div>
     )
