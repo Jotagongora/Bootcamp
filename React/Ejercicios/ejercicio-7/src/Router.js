@@ -1,8 +1,9 @@
 import React from 'react';
 import {useEffect, createContext, useState} from 'react';
-import {BrowserRouter, Route, Switch, NavLink} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Upcoming from "./Components/Upcoming";
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 import MovieDetail from './Components/MovieDetail';
 
 export const GlobalContext = createContext();
@@ -30,13 +31,13 @@ export default function Router() {
         <div>
             <BrowserRouter>
                 <GlobalContext.Provider value={{setUpComings, upComings, img_url, setPage, page, setMovie, movie}}>
-                        <Header />
-                        <Switch>
-                            <Route exact path="/" component={Upcoming}/>
-                            <Route path={`/:ID`} component={MovieDetail}/>
-                        </Switch>
+                    <Header />
+                    <Switch>
+                        <Route exact path="/" component={Upcoming}/>
+                        <Route path={`/:ID`} component={MovieDetail}/>
+                    </Switch>
                 </GlobalContext.Provider>
-                
+                <Footer/>
             </BrowserRouter>
             
             

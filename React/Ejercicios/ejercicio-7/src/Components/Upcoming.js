@@ -29,6 +29,8 @@ export default function Upcoming() {
 
     return (
         <div className="bg-upcomings">
+            <label htmlFor="search">Search :</label>
+            <input placeholder="write here..." className="searchInput" id="search" type="text"/>
             <div className="styleLinks">
                 <a onClick={handleClick} href="#">First</a>
                 <a onClick={handleClick} href="">{page > 2 && page - 2}</a>
@@ -46,12 +48,12 @@ export default function Upcoming() {
                                 <div className="container">
                                     <p>{upComing.overview}</p>
                                 </div>
-                                <button onClick={() => movieId(upComing.id)}>More info</button>
+                                <button className="btn btn-moreinfo" onClick={() => movieId(upComing.id)}>More info</button>
                             </div>
                         
                 )})}
             </div>
-            <div>
+            <div className="styleLinks">
                 <a onClick={handleClick} href="#">First</a>
                 <a onClick={handleClick} href="">{page > 2 && page - 2}</a>
                 <a onClick={handleClick} href="">{page > 1 && page - 1}</a>

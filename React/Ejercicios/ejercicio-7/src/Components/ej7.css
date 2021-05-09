@@ -6,8 +6,13 @@
     background-image: url("../Images/header.jpg");
 }
 
-.moviesImg {
-    height: 200px;
+
+.imgMovies {
+    width: 250px;
+}
+
+.imgMovies:hover {
+    cursor: pointer;
 }
 
 .movie {
@@ -30,7 +35,7 @@
 }
 
 .styleLinks > a {
-    color: black;
+    color: gray;
 }
 
 .descriptionDetails {
@@ -50,13 +55,19 @@ div > img {
 }
 
 .activePage {
-    color: red !important;
+    color: black !important;
     font-size: 25px;
 }
 
 .movieDetailsInfo {
+    width: 90%;
+    height: 85%;
+    border-radius: 25px;
+    color: rgb(71, 69, 69);
     padding: 50px;
-    padding-top: 150px;   
+    padding-top: 100px;
+    margin-top: 40px;
+    background-color: rgb(253, 255, 242);  
 }
 
 div > h1 {
@@ -71,9 +82,33 @@ div > a {
     text-decoration: none !important;
 }
 
+.btn-moreinfo {
+    color: gray;
+  background-color: rgb(255, 255, 148);
+  border-color: black;
+}
+
+.averageStyle {
+    margin-left: 350px;
+    font-size: 30px;
+    width: 60px;
+    border-radius: 25px;
+    color: white;
+    background-color: green;
+}
+
 .container > p {
     height: 50px;
     overflow: hidden;
+}
+
+.searchInput {
+    width: 30%;
+    margin: 20px;
+}
+
+.footer {
+    height: 200px;
 }
 
 
