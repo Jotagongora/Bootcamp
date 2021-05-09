@@ -17,6 +17,8 @@ export default function Upcoming() {
         setPage(currentPage => currentPage + 1)
         } else if (e.target.textContent === "Previous" && page > 1) {
             setPage(currentPage => currentPage - 1)
+        } else if (e.target.textContent === 3){
+            setPage(3)
         }
     }
 
@@ -29,6 +31,9 @@ export default function Upcoming() {
         <div>
             <div>
                 <a onClick={handleClick} href="#">Previous</a>
+                <a onClick={handleClick} href="">{page + 1}</a>
+                <a onClick={handleClick} href="">{page + 2}</a>
+                <a onClick={handleClick} href="">{page + 3}</a>
                 <a onClick={handleClick} href="#">Next</a>
             </div>
             <div className="movie">

@@ -21,9 +21,29 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.upcoming {
+    margin-top: 20px;
+}
+
+.descriptionDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 div > img {
     width: 75%;
     border-radius: 20px;
+}
+
+.imgDetails {
+    width: 80%;
+    margin-left: 20px;
+    
+}
+
+.movieDetailsInfo {
+    padding: 50px;
+    padding-top: 150px;   
 }
 
 div > h1 {

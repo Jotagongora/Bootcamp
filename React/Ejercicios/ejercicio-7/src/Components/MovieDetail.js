@@ -6,7 +6,9 @@ import {GlobalContext} from '../Router';
 
 export default function MovieDetail() {
 
-    const {setMovie, movie} = useContext(GlobalContext);
+    const imdbUrl = "https://www.imdb.com/title/"
+
+    const {setMovie, movie, img_url} = useContext(GlobalContext);
 
     const {ID} = useParams();
 
@@ -18,8 +20,18 @@ export default function MovieDetail() {
 
 
     return (
-        <div>
-            {movie.overview}
+        <div className="descriptionDetails">
+            <div>
+                <h1>{movie.title}</h1>
+                <img src={`${img_url}${movie.backdrop_path}`} alt="" className="imgDetails"/>
+                <p>{movie.vote_average}</p>
+                <p>{movie.release_date}</p>
+            </div>
+            <div className="movieDetailsInfo">
+                <h2>{movie.tagline}</h2>
+                <p>{movie.overview}</p>
+                <button><a href={`${imdbUrl}${movie.imdb_id}`}>Imdb</a></button>
+            </div>
         </div>
     )
 }
