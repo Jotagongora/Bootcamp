@@ -13,12 +13,12 @@ export default function Upcoming() {
 
     function handleClick(e) {
         e.preventDefault();
-        if(e.target.textContent === "Next" && page < 4) {
-        setPage(currentPage => currentPage + 1)
-        } else if (e.target.textContent === "Previous" && page > 1) {
-            setPage(currentPage => currentPage - 1)
-        } else if (e.target.textContent === 3){
-            setPage(3)
+        if(e.target.textContent === "First") {
+        setPage(1);
+        } else if (e.target.textContent === "Last") {
+            setPage(9)
+        } else if (e.target.textContent != "First" && e.target.textContent != "Last"){
+            setPage(Number(e.target.textContent));
         }
     }
 
@@ -28,13 +28,15 @@ export default function Upcoming() {
 
 
     return (
-        <div>
-            <div>
-                <a onClick={handleClick} href="#">Previous</a>
-                <a onClick={handleClick} href="">{page + 1}</a>
-                <a onClick={handleClick} href="">{page + 2}</a>
-                <a onClick={handleClick} href="">{page + 3}</a>
-                <a onClick={handleClick} href="#">Next</a>
+        <div className="bg-upcomings">
+            <div className="styleLinks">
+                <a onClick={handleClick} href="#">First</a>
+                <a onClick={handleClick} href="">{page > 2 && page - 2}</a>
+                <a onClick={handleClick} href="">{page > 1 && page - 1}</a>
+                <a className="activePage" onClick={handleClick} href="">{page}</a>
+                <a onClick={handleClick} href="">{page < 9 && page + 1}</a>
+                <a onClick={handleClick} href="">{page < 8 && page + 2}</a>
+                <a onClick={handleClick} href="#">Last</a>
             </div>
             <div className="movie">
                 {upComings.map(upComing => {
@@ -50,8 +52,13 @@ export default function Upcoming() {
                 )})}
             </div>
             <div>
-                <a onClick={handleClick} href="#">Previous</a>
-                <a onClick={handleClick} href="#">Next</a>
+                <a onClick={handleClick} href="#">First</a>
+                <a onClick={handleClick} href="">{page > 2 && page - 2}</a>
+                <a onClick={handleClick} href="">{page > 1 && page - 1}</a>
+                <a className="activePage" onClick={handleClick} href="">{page}</a>
+                <a onClick={handleClick} href="">{page < 9 && page + 1}</a>
+                <a onClick={handleClick} href="">{page < 8 && page + 2}</a>
+                <a onClick={handleClick} href="#">Last</a>
             </div>
         </div>
     )

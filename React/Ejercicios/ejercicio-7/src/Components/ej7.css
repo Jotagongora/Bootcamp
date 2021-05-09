@@ -3,16 +3,11 @@
 }
 
 .header {
-    background-color: black;
-    margin-bottom: 20px;
+    background-image: url("../Images/header.jpg");
 }
 
-.header > h1{
-    font-size: 60px;
-    color: darkcyan;
-    font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
+.moviesImg {
+    height: 200px;
 }
 
 .movie {
@@ -23,6 +18,19 @@
 
 .upcoming {
     margin-top: 20px;
+}
+
+.bg-upcomings {
+    background-color: rgb(253, 255, 242);
+}
+
+.styleLinks {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.styleLinks > a {
+    color: black;
 }
 
 .descriptionDetails {
@@ -39,6 +47,11 @@ div > img {
     width: 80%;
     margin-left: 20px;
     
+}
+
+.activePage {
+    color: red !important;
+    font-size: 25px;
 }
 
 .movieDetailsInfo {
