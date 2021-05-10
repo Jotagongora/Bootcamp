@@ -14,6 +14,8 @@ export default function Router() {
 
     const [movie, setMovie] = useState({});
 
+    const url_search = `https://api.themoviedb.org/3/search/movie?api_key=9f71730a503f87329ec0e2ef43411e30&query=`
+
     const url_upComings = `https://api.themoviedb.org/3/movie/upcoming?api_key=9f71730a503f87329ec0e2ef43411e30&page=${page}`;
 
     const img_url = "https://image.tmdb.org/t/p/w500";
@@ -30,7 +32,7 @@ export default function Router() {
     return (
         <div>
             <BrowserRouter>
-                <GlobalContext.Provider value={{setUpComings, upComings, img_url, setPage, page, setMovie, movie}}>
+                <GlobalContext.Provider value={{setUpComings, upComings, img_url, setPage, page, setMovie, movie, url_search}}>
                     <Header />
                     <Switch>
                         <Route exact path="/" component={Upcoming}/>
