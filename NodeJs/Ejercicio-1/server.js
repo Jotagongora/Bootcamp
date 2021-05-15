@@ -1,23 +1,51 @@
+require("./config/config");
+
 const express = require("express");
 
 const app = express();
-
-const PORT = 3000;
 
 // Primero middlewares
 
 app.use(express.json());
 
+let users = [];
+
 // Segundo endpoints
 
-app.get("/", (req, res) => {
+app.get("/users", (req, res) => {
+    const user = {name: "Jhon", email: "jhon@gmail.com"}
     res.json({
-        message: "Ejercicio-1"
+        ok: true,
+        results: users
     })
 });
 
-app.post("/", (req, res) => {
-    
+app.put("/users/:id", (req, res) => {
+    const id = req.params.id;
+    res.json({id})
 });
 
-app.listen(PORT);
+app.delete("/users/:id", (req, res) => {
+    const id = req.params.id;
+
+    const removeUser = users.splice(id, 1);
+
+    res.status(200).json(removeUser)
+});
+
+app.post("/users", (req, res) => {
+    const body = req.body; // Necesita el app.use midleware;
+
+    if(!body.name) {
+        res.status(400).json({ok: false, message: "Name is required"})
+    } else {
+        users.push(body);
+        res.status(201).json({body});
+    }
+});
+
+
+app.listen(process.env.PORT, () => {
+    console.log("Listening on port :", process.env.PORT);
+});
+
