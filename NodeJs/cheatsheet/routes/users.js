@@ -4,10 +4,18 @@ const router = express.Router();
 
 const R = require("ramda");
 
+const bcrypt = require("bcrypt");
+
 const User = require("../models/user");
 // Similar al find de mongo, si el filtro esta vacio devuelve todos.
 router.get("/", (req, res) => {
-    User.find({}).exec((error, users) => {
+    const PAGE_SIZE = 2;
+    const page = req.query.page || 1;
+
+    User.find({active: true})
+    .skip((page - 1) * PAGE_SIZE) // número de documentos que saltará
+    .limit(PAGE_SIZE) // número de documentos que devolverá
+    .exec((error, users) => {
         if (error) {
             res.status(400).json({
                 ok: false,
@@ -36,7 +44,7 @@ router.post("/", (req, res) => {
     const user = new User({
         username: body.username,
         email: body.email,
-        password: body.password
+        password: bcrypt.hashSync(body.password, 10)
     });
 
     user.save((error, savedUser) => {
