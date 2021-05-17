@@ -19,6 +19,7 @@ router.post("/", (req, res) => {
             const token = jwt.sign(
                 {user: userDB}, //payload
                 process.env.SEED,
+                {expiresIn: 40}
             );
             res.status(200).json({ok: true, token, user: userDB});
         }
