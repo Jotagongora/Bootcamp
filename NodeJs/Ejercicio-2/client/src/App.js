@@ -6,14 +6,14 @@ import Input from './Components/Input';
 
 function App() {
 
-  const API_Todos = "https://jsonplaceholder.typicode.com/todos";
+  const API_Todos = "http://localhost:3001/todolist/";
 
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
     fetch(API_Todos)
     .then(response => response.json())
-    .then(data => setTodos(data.slice(0, 20)))
+    .then(data => setTodos(data.toDoList))
   }, []);
 
   return (

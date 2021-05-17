@@ -8,7 +8,11 @@ const app = express();
 
 const toDoList = require("./routes/toDoList");
 
+const cors = require("cors");
+
 app.use(express.json());
+
+app.use(cors());
 
 app.use("/todolist", toDoList);
 
