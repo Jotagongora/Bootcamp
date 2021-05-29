@@ -15,7 +15,7 @@ export default function ToDoList({todos, setTodos}) {
 
     function remove(ID) {
         return () => {
-            setTodos(todos.filter(todo => todo.id !== ID))
+            setTodos(todos.filter(todo => todo._id !== ID))
         }
     }
 
@@ -28,7 +28,7 @@ export default function ToDoList({todos, setTodos}) {
                     addClass = "list-group-item  d-flex justify-content-between";
                 }
                 return (
-                        <li onClick={crossOut(index)} key={todo.id} className={addClass}><span>{index}: {todo.title}</span><button onClick={remove(todo.id)} className="btn btn-danger">x</button></li>
+                        <li onClick={crossOut(index)} key={todo._id} className={addClass}><span>{index}: {todo.title}</span><button onClick={remove(todo._id)} className="btn btn-danger">x</button></li>
                 )
             })}
             </ul>
