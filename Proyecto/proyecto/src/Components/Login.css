@@ -1,0 +1,14 @@
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 90%;
+    height: 800px;
+}
+
+.loginImg {
+    background-image: url("../Images/crop.php.jpeg");
+    background-position: center;
+}
+
+
