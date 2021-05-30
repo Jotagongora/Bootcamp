@@ -1,0 +1,7 @@
+div > .postContainer {
+    width: 90%;
+    border: 2px solid black;
+}
+div > .postContainer > img {
+    position: relative;
+}
