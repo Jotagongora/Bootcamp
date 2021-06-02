@@ -24,6 +24,7 @@ export default function Profile() {
                     <a href="">Publicaciones</a>
                     <a href="">Fotos</a>
                     <a href="">Amigos</a>
+                    <a href="">Misiones</a>
                 </nav>
                 </div>
                 <div></div>
