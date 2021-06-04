@@ -1,14 +1,18 @@
 import {BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
-import Public from "./pages/Public";
 import Navbar from './components/Navbar';
+import Pages from './pages/Pages';
+import AuthContextProvider from './contexts/AuthContext';
 
 
 function App() {
   return (
     <div>
-      <Router>
-       <Navbar/>
-      </Router>
+      <AuthContextProvider>
+        <Router>
+          <Navbar/>
+          <Pages/>
+        </Router>
+      </AuthContextProvider>
     </div>
   );
 }
